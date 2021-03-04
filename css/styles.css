@@ -4,6 +4,7 @@
   --main-background-color: #e5e5e5; /* основной цвет фона #E5E5E5 */
   --secondary-background-color: #2f303a; /* дополнительный цвет фона #2F303A */
 
+  --button-hover-color: #188ce8; /*цвет активной кнопки #188CE8 */
   --active-link-color: #2196f3; /* цвет активной ссылки #2196F3 */
   --passive-link-color: #757575; /* цвет пассивной ссылки #757575 */
   --passive-link-color-footer: rgba(255, 255, 255, 0.6);
@@ -367,8 +368,7 @@ main {
 }
 
 .main-button:hover {
-  background: var(--white-color);
-  color: var(--active-link-color);
+  background: var(--button-hover-color);
 }
 
 /* особенности */
@@ -787,11 +787,15 @@ main {
   pointer-events: none;
 }
 
+.backdrop-modal * {
+  outline: 1px solid red;
+}
+
 .backdrop-modal {
   position: relative;
   margin: auto;
   width: 528px;
-  height: 581px;
+  /* height: 581px; */
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -805,21 +809,23 @@ main {
 }
 
 .modal-button-close {
+  display: inline-flex;
   position: absolute;
-  /* display: flex; */
-  top: 8px;
-  right: 8px;
   width: 30px;
   height: 30px;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+
   fill: currentColor;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  margin: auto;
 }
 
 .modal-icon-close {
-  display: flex;
-  text-align: center;
+  /* display: flex;
+  text-align: center; */
 }
 
 .modal-button-close:hover {
@@ -873,6 +879,7 @@ main {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .wrapper {
@@ -887,4 +894,53 @@ main {
   text-align: center;
   left: 12px;
   top: 11px;
+}
+
+.check-label {
+  margin-bottom: var(--standart-30px);
+}
+
+.check-icon {
+  border: 2px solid var(--main-text-color);
+  border-radius: 2px;
+  margin-right: 8.38px;
+}
+
+.check-icon use {
+  display: none;
+}
+
+#check-agreement:checked + .check-icon {
+  border: none;
+}
+
+#check-agreement:checked + .check-icon use {
+  display: block;
+}
+
+.check-text {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  line-height: 1.714;
+  /* identical to box height, or 171% */
+
+  letter-spacing: 0.03em;
+}
+.check-text a {
+  color: var(--active-link-color);
+  text-decoration: underline;
+}
+
+.submit-button {
+  margin: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  background-color: var(--active-link-color);
+  color: var(--white-color);
+}
+
+.submit-button:hover {
+  background-color: var(--button-hover-color);
 }

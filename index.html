@@ -444,7 +444,7 @@
 
           <label class="modal-label" for="phone">Телефон</label>
           <div class="wrapper">
-            <input class="modal-input" type="text" name="phone" id="phone" />
+            <input class="modal-input" type="tel" name="phone" id="phone" />
             <svg class="modal-form-icon">
               <use href="./images/svg/sprite.svg#icon-phone"></use>
             </svg>
@@ -469,14 +469,34 @@
               placeholder="Введите текст"
             ></textarea>
           </div>
-          <p class="agreement">
-            Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
-          </p>
-          <button class="submit">Отправить</button>
+          <label for="check-agreement" class="check-label">
+            <input
+              type="checkbox"
+              name="check-agreement"
+              value="check-agreement"
+              id="check-agreement"
+              class="visually-hidden"
+              unchecked
+            />
+            <svg
+              name="check-agreement"
+              class="check-icon"
+              width="16px"
+              height="15px"
+            >
+              <use href="./images/svg/sprite.svg#icon-check"></use>
+            </svg>
+
+            <span class="check-text"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="#">Условия договора</a></span
+            >
+          </label>
+          <button type="submit" class="submit-button">Отправить</button>
         </form>
         <!-- кнопочка закрытия -->
-        <button class="modal-button-close" data-modal-close>
-          <svg class="modal-icon-close" width="30px" height="30px">
+        <button type="button" class="modal-button-close" data-modal-close>
+          <svg class="modal-icon-close" width="18px" height="18px">
             <use href="./images/svg/sprite.svg#close-icon"></use>
           </svg>
         </button>
