@@ -796,37 +796,95 @@ main {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px;
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
 }
 
-.backdrop-modal-button-close {
+.modal-button-close {
   position: absolute;
+  /* display: flex; */
   top: 8px;
   right: 8px;
-  margin-left: auto;
   width: 30px;
   height: 30px;
   fill: currentColor;
-  object-fit: fill;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin: auto;
 }
 
-/* временно для прикола */
-.modal-title,
-.modal-text {
-  display: block;
-  margin: auto;
-  margin-top: var(--standart-94px);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #212121;
-
+.modal-icon-close {
+  display: flex;
   text-align: center;
 }
 
-.modal-text {
-  font-weight: 400;
-  font-size: 15px;
+.modal-button-close:hover {
+  fill: var(--active-link-color);
+  border-color: var(--active-link-color);
+}
+
+.modal-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-input,
+.modal-label,
+.modal-textarea {
+  width: 100%;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.modal-label {
+  margin-bottom: 4px;
+  text-align: left;
+  color: var(--secondary-text-color);
+}
+
+.modal-input {
+  color: var(--main-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 0 12px 42px;
+  margin-bottom: 10px;
+}
+
+.modal-textarea {
+  font-style: 14px;
+  color: var(--main-text-color);
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.modal-form-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  fill: currentColor;
+  text-align: center;
+  left: 12px;
+  top: 11px;
 }
