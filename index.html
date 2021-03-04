@@ -434,33 +434,34 @@
         <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
 
         <form class="modal-form">
-          <label for="name">Имя</label>
+          <label class="modal-label" for="name">Имя</label>
           <div class="wrapper">
-            <input type="text" name="name" id="name" />
-            <svg class="modal-form-icon" width="12" height="12">
+            <input class="modal-input" type="text" name="name" id="name" />
+            <svg class="modal-form-icon">
               <use href="./images/svg/sprite.svg#icon-person"></use>
             </svg>
           </div>
 
-          <label for="phone">Телефон</label>
+          <label class="modal-label" for="phone">Телефон</label>
           <div class="wrapper">
-            <input type="text" name="phone" id="phone" />
-            <svg class="modal-form-icon" width="12" height="12">
+            <input class="modal-input" type="text" name="phone" id="phone" />
+            <svg class="modal-form-icon">
               <use href="./images/svg/sprite.svg#icon-phone"></use>
             </svg>
           </div>
 
-          <label for="email">Почта</label>
+          <label class="modal-label" for="email">Почта</label>
           <div class="wrapper">
-            <input type="text" name="email" id="email" />
-            <svg class="modal-form-icon" width="12" height="12">
+            <input class="modal-input" type="text" name="email" id="email" />
+            <svg class="modal-form-icon">
               <use href="./images/svg/sprite.svg#icon-email"></use>
             </svg>
           </div>
 
-          <label for="comment">Комментарий</label>
+          <label class="modal-label" for="comment">Комментарий</label>
           <div class="wrapper">
             <textarea
+              class="modal-textarea"
               name="comment"
               id="comment"
               cols="30"
@@ -474,8 +475,8 @@
           <button class="submit">Отправить</button>
         </form>
         <!-- кнопочка закрытия -->
-        <button data-modal-close>
-          <svg class="backdrop-modal-button-close">
+        <button class="modal-button-close" data-modal-close>
+          <svg class="modal-icon-close" width="30px" height="30px">
             <use href="./images/svg/sprite.svg#close-icon"></use>
           </svg>
         </button>
