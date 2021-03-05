@@ -417,6 +417,24 @@
             </li>
           </ul>
         </div>
+        <form class="form-mailing">
+          <label class="mailing-label" for="email-footer">
+            <span>Подпишитесь на рассылку</span>
+            <input
+              type="mail"
+              id="email-footer"
+              name="email"
+              placeholder="E-mail"
+              class="footer-email-input"
+            />
+          </label>
+          <button type="submit" class="subscribe-button" value="subscribe">
+            <span>Подписаться</span>
+            <svg class="send-icon" width="24" height="24">
+              <use href="./images/svg/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
       <div class="made">
         <hr class="divider" />
@@ -450,9 +468,14 @@
             </svg>
           </div>
 
-          <label class="modal-label" for="email">Почта</label>
+          <label class="modal-label" for="email-modal">Почта</label>
           <div class="wrapper">
-            <input class="modal-input" type="text" name="email" id="email" />
+            <input
+              class="modal-input"
+              type="text"
+              name="email-modal"
+              id="email-modal"
+            />
             <svg class="modal-form-icon">
               <use href="./images/svg/sprite.svg#icon-email"></use>
             </svg>
@@ -487,7 +510,9 @@
               <a href="#">Условия договора</a></span
             >
           </label>
-          <button type="submit" class="submit-button">Отправить</button>
+          <button type="submit" class="send-button" value="send-personal-data">
+            Отправить
+          </button>
         </form>
         <!-- кнопочка закрытия -->
         <button type="button" class="modal-button-close" data-modal-close>

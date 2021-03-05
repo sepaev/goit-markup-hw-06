@@ -16,6 +16,7 @@
   --banner-color: #2f303a; /* цвет фона за героем #2F303A */
   --border-color-outline: #eee; /* цвет границы #EEEEEE */
   --grey-color: #afb1b8; /*серый цвет #AFB1B8 */
+  --black-15color: rgba(0, 0, 0, 0.15); /*черный цвет 15% rgba(0, 0, 0, 0.15) */
   --passive-background-color: #afb1b8; /*цвет кнопки неактивный #AFB1B8 */
   --social-passive-footer-color: #fff; /*цвет кнопки социальной сети в футере неактивный #FFFFFF */
   --social-active-color: #fff; /*цвет кнопки социальной сети активный #FFFFFF */
@@ -94,10 +95,10 @@ a:focus {
   outline: var(--focus-outline);
 }
 
-input:active,
+/* input:active,
 textarea:active {
   outline: var(--focus-outline);
-}
+} */
 
 :focus {
   outline: var(--focus-outline);
@@ -258,10 +259,10 @@ footer {
 
 footer .container {
   padding: 60px var(--standart-15px);
-  display: flex;
+  display: inline-flex;
   height: 100%;
   margin: auto;
-  width: auto;
+  width: 100%;
 }
 
 .contacts-container {
@@ -322,6 +323,81 @@ footer .container {
   display: inline-flexbox;
   text-align: center;
   color: var(--secondary-text-color);
+}
+
+/* подписка */
+
+.form-mailing {
+  display: inline-flex;
+  width: 100%;
+  padding-top: 12px;
+  padding-left: var(--standart-94px);
+  justify-content: flex-end;
+}
+
+.mailing-label {
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.mailing-label span {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.footer-email-input {
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px var(--black-15color));
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.footer-email-input,
+.footer-email-input::placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: var(--passive-link-color-footer);
+}
+
+.subscribe-button {
+  min-width: 200px;
+  height: 50px;
+  background-color: var(--active-link-color);
+  box-shadow: 0px 4px 4px var(--black-15color);
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 1.875;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  justify-content: center;
+
+  display: flex;
+  padding: 10px 0px;
+  margin-top: 36px;
+  margin-left: 12px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.send-icon {
+  margin-left: 10px;
 }
 
 /* 
@@ -733,6 +809,8 @@ main {
   text-align: left;
   background: var(--white-color);
   outline: 1px solid var(--border-color-outline);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover,
@@ -741,7 +819,6 @@ main {
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .portfolio-description,
@@ -845,6 +922,8 @@ main {
   fill: currentColor;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button-close:hover,
@@ -876,6 +955,10 @@ main {
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0.01em;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus,
@@ -941,6 +1024,7 @@ main {
   text-align: center;
   left: 12px;
   top: 11px;
+  pointer-events: none;
 }
 
 .check-label {
@@ -977,7 +1061,7 @@ main {
   text-decoration: underline;
 }
 
-.submit-button {
+.send-button {
   margin: auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -991,8 +1075,8 @@ main {
   letter-spacing: 0.06em;
 }
 
-.submit-button:hover,
-.submit-button:focus {
+.send-button:hover,
+.send-button:focus {
   background-color: var(--button-hover-color);
   text-decoration: ;
 }
