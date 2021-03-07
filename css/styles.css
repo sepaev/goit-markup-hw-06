@@ -437,7 +437,9 @@ main {
       rgba(47, 48, 58, 0.4)
     ),
     url('../images/main-bg.jpg');
-  background-size: contain, contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   max-width: 1600px;
   margin: auto;
 }
@@ -702,11 +704,14 @@ main {
   border: 1px solid var(--grey-color);
   box-sizing: border-box;
   border-radius: 4px;
+}
+
+.clients-item a {
   max-width: 210px;
   min-width: 170px;
+  height: 90px;
   cursor: pointer;
   fill: currentColor;
-  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -720,7 +725,9 @@ main {
 }
 
 .clients-item:hover,
-.clients-item:focus {
+.clients-item:focus,
+.clients-item:hover a,
+.clients-item:focus a {
   color: var(--active-link-color);
   border: 1px solid var(--active-link-color);
 }
