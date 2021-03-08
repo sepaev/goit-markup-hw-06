@@ -311,8 +311,8 @@ footer .container {
 }
 
 .social-container {
-  padding-top: 12px;
-  padding-left: 70px;
+  margin-top: 12px;
+  margin-left: 70px;
 }
 
 .social-container-title {
@@ -336,8 +336,8 @@ footer .container {
 .form-mailing {
   display: inline-flex;
   width: 100%;
-  padding-top: 12px;
-  padding-left: var(--standart-94px);
+  margin-top: 12px;
+  margin-left: var(--standart-94px);
   justify-content: flex-end;
 }
 
